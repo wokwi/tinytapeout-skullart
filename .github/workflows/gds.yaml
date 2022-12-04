@@ -41,9 +41,10 @@ jobs:
 
     - name: Copy GDS
       run: |
-        mkdir -p runs/wokwi/results/final/gds runs/wokwi/results/final/lef
+        mkdir -p runs/wokwi/results/final/gds runs/wokwi/results/final/lef runs/wokwi/results/final/verilog/gl
         cp gds/skullart.gds runs/wokwi/results/final/gds
         cp gds/skullart.lef runs/wokwi/results/final/lef
+        cp src/skullart.gl.v runs/wokwi/results/final/verilog/gl/skullart.v
 
     # for debugging, show all the files
     - name: show files
