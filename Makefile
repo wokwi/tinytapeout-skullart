@@ -29,7 +29,7 @@ gds:
 	mkdir -p gds
 
 gds/skullart.gds: src/skullart.mag
-	echo "gds write \"$@\"" | magic -rcfile $(PDK_ROOT)/sky130A/libs.tech/magic/sky130A.magicrc -noconsole -dnull $<
+	echo "select visible\nupsidedown\nsideways\ngds write \"$@\"" | magic -rcfile $(PDK_ROOT)/sky130A/libs.tech/magic/sky130A.magicrc -noconsole -dnull $<
 
 gds/skullart.lef: src/skullart.mag
-	echo "lef write \"$@\"" | magic -rcfile $(PDK_ROOT)/sky130A/libs.tech/magic/sky130A.magicrc -noconsole -dnull $<
+	echo "select visible\nupsidedown\nsideways\nlef write \"$@\"" | magic -rcfile $(PDK_ROOT)/sky130A/libs.tech/magic/sky130A.magicrc -noconsole -dnull $<
